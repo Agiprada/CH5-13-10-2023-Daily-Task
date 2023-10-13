@@ -15,6 +15,12 @@ module.exports = (sequelize, DataTypes) => {
           allowNull: false,
         },
       });
+      User.belongsTo(models.Shop, {
+        foreignKey: {
+          name: "userId",
+          allowNull: false,
+        },
+      });
     }
   }
   User.init(
